@@ -115,8 +115,8 @@ class GatedPixelCNNPrior(nn.Module):
 
             kl = self.build_model(inds)
             
-        report_kl_loss += kl.sum().item()
-        report_rec_loss += loss_rc.sum().item()
+            report_kl_loss += kl.sum().item()
+            report_rec_loss += loss_rc.sum().item()
             
         nll = report_rec_loss / report_num_sents
         ppl = np.exp((report_kl_loss+report_rec_loss)/ report_num_words)

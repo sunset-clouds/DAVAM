@@ -175,9 +175,9 @@ class GatedPixelCNNPrior(nn.Module):
 
                 iter_+=1
                 
-            if epoch % args.pixel_save_every:
-                saver_name = os.path.join(args.saver_dir, "PixelCNNPrior_"+str(epoch)+".pt")
-                torch.save(self.prior.state_dict(),saver_name)
+            #if epoch % args.pixel_save_every:
+            #    saver_name = os.path.join(args.saver_dir, "PixelCNNPrior_"+str(epoch)+".pt")
+            #    torch.save(self.prior.state_dict(),saver_name)
 
             self.prior.eval()
             with torch.no_grad():

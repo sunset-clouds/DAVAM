@@ -199,9 +199,9 @@ class DisCreteVAE(nn.Module):
                 iter_ += 1
 
             ## save every x epoch
-            if epoch % args.save_every:
-                saver_name = os.path.join(args.saver_dir, "DisCreteVAE_"+str(epoch)+".pt")
-                torch.save(self.state_dict(),saver_name)
+            #if epoch % args.save_every:
+            #    saver_name = os.path.join(args.saver_dir, "DisCreteVAE_"+str(epoch)+".pt")
+            #    torch.save(self.state_dict(),saver_name)
 
             print('vq weight %.4f' % vq_weight)
 

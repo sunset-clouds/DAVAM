@@ -1,0 +1,16 @@
+version: 1
+kind: standalone
+jobname: discrete-vae 
+container:
+  image:
+    docker.oa.com/g_tfplus/ai-drug:tf1.12-deepchem2.1.1-rdkit2018.03-pytorch1.0.1-keras2.2.4-java8-hadoop2.7.5 
+  resources: 
+    nvidia.com/gpu: 1
+  env:
+  - name: A
+    value: "1"
+
+
+# optional images:
+# docker.oa.com/g_tfplus/pytorch:pytorch0.4.0-python3.6-cuda9-cudnn7.0.4.3-ubuntu16.04-hadoop-2.7.5-java8
+

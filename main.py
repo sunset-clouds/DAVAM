@@ -34,7 +34,7 @@ def main(args):
 
 if __name__ == '__main__':
     args = argparser.parse_arg()
-    sys.stdout = Logger(args.log_dir)
+    sys.stdout = Logger(args)
     # print args
     dict_args = vars(args)
     for k, v in zip(dict_args.keys(), dict_args.values()):

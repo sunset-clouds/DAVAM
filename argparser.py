@@ -87,7 +87,7 @@ def parse_arg():
     if args.saver_dir == "./saver":
         args.saver_dir = os.path.join(args.saver_dir, args.dataset, \
                      '-'.join([str(args.seed), args.job_suffix]))
-        args.log_dir = args.saver_dir
+    args.log_dir = args.saver_dir
 
     if not os.path.exists(args.saver_dir):
         os.makedirs(args.saver_dir)
